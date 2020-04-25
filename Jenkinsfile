@@ -1,5 +1,5 @@
 pipeline {
-    //master executor should be set to 0
+    // master executor should be set to 0
     agent any
     stages {
         stage('Build Jar') {
@@ -11,16 +11,16 @@ pipeline {
         stage('Build Image') {
             steps {
                 //sh
-               bat "docker build -t='nikhil/selenium-docker' ."
+                bat "docker build -t='nikhiladyanthaya/selenium-docker' ."
             }
         }
         stage('Push Image') {
             steps {
-                //withCredentials([usernamePassword(credentialsId:'DockerHub', passwordVariable:'pass', usernameVariable:'user')]){
-			        //sh
-                    // bat "docker login --username=${user}  --password=${pass}"
-                    bat "docker push nikhil/selenium-docker:latest"
-            // }
+		    //  withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'pass', usernameVariable: 'user')]) {
+                    //sh
+			     // bat "docker login --username=${user} --password=${pass}"
+			        bat "docker push nikhiladyanthaya/selenium-docker:latest"
+			    }                           
             }
         }
     }
