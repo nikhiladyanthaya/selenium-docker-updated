@@ -20,7 +20,7 @@ pipeline {
                     //sh
 			     // bat "docker login --username=${user} --password=${pass}"
 			        bat "docker push nikhiladyanthaya/selenium-docker:latest"
-			    }                           
+			 // }                           
             }
         }
     }
