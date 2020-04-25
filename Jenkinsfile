@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build Jar') {
            
-         steps {
+            steps {
                 bat 'mvn clean package -DskipTests'
             }
         }
@@ -15,11 +15,10 @@ pipeline {
         }
         stage('Push Image') {
             steps {
-                withCredentials([usernamePassword(credentialsId:'DockerHub', passwordVariable:'pass', usernameVariable:'user')])
-			        bat "docker login --username=${user}  --password=${pass}"
+                //withCredentials([usernamePassword(credentialsId:'DockerHub', passwordVariable:'pass', usernameVariable:'user')])
+			        // bat "docker login --username=${user}  --password=${pass}"
                     bat "docker push nikhil/selenium-docker:latest"
                 }
             }
         }
     }
-}
