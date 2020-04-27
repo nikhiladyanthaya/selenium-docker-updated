@@ -1,10 +1,11 @@
 package com.searchmodule.tests;
 
-import com.searchmodule.pages.SearchPage;
-import com.tests.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.searchmodule.pages.SearchPage;
+import com.tests.BaseTest;
 
 public class SearchTest extends BaseTest {
 

@@ -1,11 +1,16 @@
 package com.newtours.tests;
 
-import com.newtours.pages.*;
-import com.tests.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.newtours.pages.FindFlightPage;
+import com.newtours.pages.FlightConfirmationPage;
+import com.newtours.pages.FlightDetailsPage;
+import com.newtours.pages.RegistrationConfirmationPage;
+import com.newtours.pages.RegistrationPage;
+import com.tests.BaseTest;
 
 public class BookFlightTest extends BaseTest {
 
