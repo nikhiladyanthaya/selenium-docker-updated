@@ -25,4 +25,5 @@ ADD healthcheck.sh                      healthcheck.sh
 # HUB_HOST
 # MODULE
 
+
 ENTRYPOINT sh healthcheck.sh
